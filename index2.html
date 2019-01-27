@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="container text-center">
+        <p id="score">0</p>
+    </div>
+
+    <button class="btn btn-primary">Кликер</button>
+    <div class="conteiner">
+        <div class="row justify-content-between">
+            <button type="button" class="col-4 btn btn-secondary">secondary</button>
+            <button type="button" class="col-2.5 btn btn-success">success</button>
+            <button type="button" class=" btn btn-danger">danger</button>
+        </div>
+        <div class="row justify-content-between">
+            <button type="button" class="col-3.3 btn  btn-warning">warning</button>
+            <button type="button" class="col-2.1 btn  btn-info">info</button>
+            <button type="button" class="col-1.1 btn btn-light">Light</button>
+        </div>
+        <div class="row justify-content-between">
+            <button type="button" class="col-1.2 btn btn-primary">primary</button>
+            <button type="button" class="col-3 btn btn-dark">dark</button>
+            <button type="button" class="col-2.1 btn btn-link">link</button>
+        </div>
+    </div>
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        var score = 0;
+        var button = $("button");
+        $("button").click(function () {
+            var butNum = Math.floor(Math.random() * $("button").length);
+            $("button").attr("class", "");
+            $(button[butNum]).addClass("btn")
+            $(button[butNum]).addClass("btn-primary")
+                score++;
+                s
+                $("#score").text(score);
+            });
+
+            $("button").click(function () {
+            var butNum = Math.floor(Math.random() * $("button").length);
+            $("button").attr("class", "");
+            $(button[butNum]).addClass("btn")
+            $(button[butNum]).addClass("btn-danger")
+                score-=1;
+                $("#score").text(score);
+            });
+        
+
+       // $(".col").css("min-weight", "200px");
+       // $(".col").addClass("text-center");
+//
+       // $("button").click(function () {
+          //  $("button").removeClass();
+           // $(this).addClass("btn-primary");
+
+        //});
+    </script>
+
+</body>
+
+</html>
